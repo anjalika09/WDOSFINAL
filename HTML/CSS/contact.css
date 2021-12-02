@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  
+}
+
+body{
+  background:white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/santani-pool-3.jpg);
+  background-repeat:no-repeat;
+  background-size: 100%;
+}
+
+
+
+.contact-info{               
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  
+}
+
+.card{
+  background: transparent;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  border: white;
+  box-shadow: white;
+  border-radius: 5mm;
+}
+
+.card-icon{
+  font-size: 2px;
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 80px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+  background: none;
+  color: #8848ff;
+  transform: scale(1.6);
+}
+
+.card p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info{
+      flex-direction: column;
+  }
+  .card{
+      width: 100%;
+      max-width: 300px;
+      margin: 10px 0;
+  } 
+
+}

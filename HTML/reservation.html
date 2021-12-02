@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" type="text/css" href="CSS/reservation.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="icon" type="image/pngt" href="Images/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+  <body>
+        <!-- Header section which includes the logo and social media buttons-->
+        <header>
+          <a href="home.html">
+          <img class="logo" src="images/logo1.png" alt="logo"></a>
+                   <!--The main navigation-->
+ 
+             <input type="checkbox" id="active">
+             <label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
+             <div class="wrapper">
+                 <ul>
+                    <li><a href="home.html">Home</a> </li>
+                    <li><a href="accommodation.html">Accommodation</a> </li>
+                    <li><a href="dinning.html">Dinning</a> </li>
+                    <li><a href="reservation.html">Reservation</a> </li>
+                    <li><a href="contact.html">Contact</a> </li>
+                   
+                    </ul>
+               </div>
+               
+          </header>   
+
+  <!--reserve multiple rooms-->
+  <main> 
+    <section id="customer">
+      <form method="GET">
+  
+   
+        <fieldset>
+          <h3><b>Customer Details</b></h3><br>
+          <p><br>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" required>
+          </p><br>
+          <p>
+            <label for="number">Phone Number:</label><br>
+            <input type="number" id="number" required>
+          </p><br>
+          <label for="address">Addresss</label><br>
+            <input type="text" id="address">
+        </fieldset>
+      </form>
+    </section>
+  
+    <!--Select room type-->
+    <section id="roomtype">
+        <form method="GET">
+          <fieldset>
+            <h3><b>Room Type</b></h3><br>
+        <p><label class="c">Standard: <input type="radio" name="room" id="Standard"><span class="r"></span></label> </p> <br>
+        <p><label class="c">Premium: <input type="radio" name="room" id="Premium"><span class="r"></span></label></p><br>
+        <p><label class="c">Deluxe: <input type="radio" name="room" id="Deluxe"><span class="r"></span></label></p> <br>
+        <p><label class="c">Suit: <input type="radio" name="room" id="Suit"><span class="r"></span></label></p> <br>
+   
+      </fieldset>
+      </form>
+    </section>
+  
+    <!--Select meal type-->
+    <section id="mealtype">
+      <form method="GET">
+        <fieldset>
+      <h3><b>Meal Type </b></h3><br>
+      <p><label class="c">BB : <input type="radio" name="meal" id="BB"><span class="r"></span></label></p><br>
+      <p><label class="c"> HB : <input type="radio" name="meal" id="HB" checked><span class="r"></span></label></p><br>
+      <p><label class="c"> FB : <input type="radio" name="meal" id="FB"><span class="r"></span></label></p> <br>
+    </fieldset>
+  </form>
+    </section>
+  
+    <!--Select Occupancy-->
+    <section id="Occupancy">
+      <form method="GET">
+        <fieldset>
+          <h3><b>Occupancy</b></h3><br>
+      <p><label class="c">1  <input type="radio" name="Occupancy" id="1"><span class="r"></span></label></p><br>
+      <p><label class="c">2 <input type="radio" name="Occupancy" id="2" checked><span class="r"></span></label></p><br>
+      <p><label class="c"> 3 <input type="radio" name="Occupancy" id="3"><span class="r"></span></label></p> <br>
+    </fieldset>
+  </form>
+    </section>
+  
+  
+    <!--Select extras-->
+    <section id="extras">
+      <form method="GET">
+        <fieldset>
+          <h3><b>Extra</b></h3>
+          <section id="extrass">
+          <p> <label class="c">	Cake on arrival :  &emsp;<input type="checkbox" name="extra" id="Cake on arrival"><span class="r"></span></label></p><br>
+          <p> <label class="c"> extra bed :  &emsp;<input type="checkbox" name="extra" id="extra bed"><span class="r"></span></label></p><br>
+          <p> <label class="c">candle light dinner on the first day  :  &emsp;<input type="checkbox" name="extra" id="candle light dinner"><span class="r"></span></label></p><br>
+        </section>
+        </fieldset>
+      </form>
+    </section>
+  <br>
+  
+  <!--Buttons to output results-->
+  <div>
+  <section><button id="addorder">Add to Order</button>&emsp;<button id="order">Place Order</button></section><br>
+  <section><button id="addfav">Add To Favourites</button>&emsp;<button id="orderfav">Order Favourite</button></section><br>
+  <section><button id="cl">Check Loyalty</button></section><br>
+  </div>
+  
+  <!--Final Results-->
+  <fieldset><legend>Customer Details:</legend>
+  <p id="cname"></p>
+  <p id="cnumber"></p>
+  <p id="caddresss"></p>
+  </fieldset> 
+  <fieldset><legend>Current Order:</legend>
+  <p id="co"></p></fieldset>
+  <fieldset><legend>Current Order Cost:</legend>
+  <p id="coc">0</p></fieldset>
+  <fieldset><legend>Overall Order:</legend>
+  <p id="oo"></p>
+  </fieldset>
+  <fieldset><legend>Overall Order Cost:</legend>
+  <p id="ooc">0</p></fieldset>
+  <fieldset><legend>Loyalty Points:</legend>
+  <p id="lp"></p>
+  </fieldset>
+
+
+    <!--Page Footer-->
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>Santani</h2>
+  <div class="content">
+              <p> Designed to free the mind while treading as lightly as possible on the earth, our private sanctuaries blur the distinction between indoors and out, to encourage you to rest, relax and meditate while inhaling the purest, freshest air and living within in this pristine, truly inspiring scenery that surrounds us.</strong>
+  <div class="social">
+                <a href="https://www.facebook.com/santaniwellness/"><span class="fa fa-facebook-f"></span></a>
+                <a href="https://www.instagram.com/santani_wellness/"><span class="fa fa-instagram"></span></a>
+                <a href="https://twitter.com/Santani_lk"><span class="fa fa-twitter"></span></a>
+          </div>
+       </div>
+  </div>
+  <div class="right box">
+            <h2>Address</h2>
+  <div class="content">
+              <div class="place">
+                <a href="contact.html"><span class="fa fa-map-marker"></span></a>
+                <span class="text">Santani Wellness Resort, Arantenna Estate, Werapitiya, Kandy, Sri Lanka.</span>
+              </div>
+  <div class="phone">
+    <a href="contact.html"><span class="fa fa-phone"></span></a>
+                <span class="text">(+94) 70 366 9110</span>
+              </div>
+  <div class="email">
+    <a href="contact.html"><span class="fa fa-envelope"></span></a>
+                <span class="text">reservations@santani.lk</span>
+              </div>
+  </div>
+        </div>
+      </div>
+      </footer>
+</main>
+
+<script src="JavaScript/reservation.js"></script>
+</body>
+</html>
+  
+
+
+

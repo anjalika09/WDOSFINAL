@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    background-image:  url(../images/santani-dining.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position:  center center;
+    background-attachment: fixed;
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+ }
+
+ h2{
+    margin: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 15px;
+    color: rgb(206, 202, 7);
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 40px;
+    
+ }
+ 
+ p.a{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size:  25px;
+    line-height: 37px;
+    margin: 40px;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: left;
+    margin-bottom: 15em;
+ }
+
+ .box-area{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.single-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content:stretch;
+    width: 340px;
+    height: 650px;
+    border-radius: 5px;
+    background-color: rgb(24, 47, 70);
+    text-align:center;
+    margin: 25px;
+    padding: 20px;
+    transition: 0.6s;
+    
+}
+
+.img-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    border: 2px solid rgb(236, 236, 236);
+    border-radius: 2%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-box:nth-child(1) .img-area{
+    background-image: url(../images/santani-dining-1.jpg);
+}
+
+.single-box:nth-child(2) .img-area{
+    background-image: url(../images/santani-dining-2.jpeg);
+}
+
+.single-box:nth-child(3) .img-area{
+    background-image: url(../images/santani-dining-3.jpg);
+}
+
+.header-text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 48px;
+    color: rgb(13, 169, 180);
+}
+
+.img-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 15px;
+}
+
+.img-text p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: rgb(49, 119, 160);
+    display:inline-flex;
+}
+
+
+.button{
+    padding: .8em;
+    background-color: teal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin: 1cm; 
+    transition: 0.8s ease;         
+    color: aliceblue;    
+    align-items:stretch;
+    
+}
+
+.button:hover{
+    background-color: rgb(233, 124, 73);
+}
+
+h1.b{
+    color: white;
+    font-style: normal;
+    text-shadow: 4px 4px 4px #000000;
+    font-size: 45px;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 40px;
+
+}
+
+.buttn{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  place-items: center;
+  padding: 20px;
+  transition: background 0.5s;
+}
+.buttn:first-child:hover{
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+}
+.buttn:last-child:hover{
+  background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+  background-size: 400%;
+}
+.buttn:first-child:before,
+.buttn:last-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.buttn:first-child:hover:before,
+.buttn:last-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+.buttn:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
